@@ -1,4 +1,10 @@
-# harness-racing-stats
+# Oma Kirjasto - palvelu
+
+Oma kirjasto-palvelu, jossa mahdollista katsella saatavilla olevia kirjoja! Palvelu sisältää myös listauksen kirjailijoista. Voit halutessasi poistaa tai lisätä kirjoja sekä katsella tarkemmin kunkin kirjan tietoja.
+
+Käytössä dummy dataa palvelusta https://fakerestapi.azurewebsites.net/index.html
+
+Node --version 6.14.15
 
 ## Project setup
 ```
