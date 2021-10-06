@@ -20,7 +20,7 @@ import {
 } from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
-import state from "./mocks/mock-data.json";
+import storeJson from "./store/store.json";
 import BookService from "./services/BookService";
 import BookCoverService from "./services/BookCoverService";
 import AuthorService from "./services/AuthorService";
@@ -49,7 +49,7 @@ Vue.use(PaginationPlugin);
 //Mutationeille ja actioneille kannattaisi harkita omaa luokkaa
 //Gettersien ja settersien lisäykset tulevaisuudessa
 const store = new Vuex.Store({
-  state: state,
+  state: storeJson,
   mutations: {
     deleteBook(state, id) {
       let filteredBooks = state.books.filter((item) => {
