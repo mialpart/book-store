@@ -47,7 +47,6 @@ export default {
 }
 
 .info {
-    max-width: 300px;
 }
 
 .box {

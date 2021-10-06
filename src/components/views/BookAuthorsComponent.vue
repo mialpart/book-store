@@ -1,6 +1,6 @@
 <template>
   <div v-if="bookAuthorsExist" class="box">
-    <div >
+    <div class="info" >
       <h2>Kirjailijat</h2>
       <ul v-for="(author, index) in getBookAuthors" v-bind:key="index">
         <AuthorComponent :authorProp="author"></AuthorComponent>
@@ -53,9 +53,7 @@ export default {
 }
 
 .info {
-  width: 300px;
-  max-width: 300px;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 .box {

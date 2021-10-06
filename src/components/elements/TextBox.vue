@@ -26,12 +26,10 @@ export default {
 }
 .texts {
   margin: 20px;
-  margin-left: 30px;
 }
 
 .info {
-  width: 300px;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 .box {

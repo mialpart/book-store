@@ -2,13 +2,12 @@
   <div class="page-margin">
     <div v-if="!isLoading">
       <div v-if="storeHasBook">
-        <div class="grid">
-          <div>
-            <BookInfoComponent class="box" :book="getBook"></BookInfoComponent>
-            <BookAuthorsComponent class="info box"></BookAuthorsComponent>
-          </div>
-          <div></div>
+        <div class="">
           <div v-if="getBook" class="wrap-text">
+            <div class="grid">
+                <BookInfoComponent class="box" :book="getBook"></BookInfoComponent>
+                <BookAuthorsComponent class="info box"></BookAuthorsComponent>
+            </div>
             <TextBox title="Kuvaus" :text="getBook.description"></TextBox>
             <TextBox title="Katkelma" :text="getBook.excerpt"></TextBox>
           </div>
@@ -67,26 +66,30 @@ export default {
 </script>
 
 <style>
-@media (min-width: 700px) {
+
+@media (min-width: 1000px) {
     .grid {
         display: grid;
-        grid-template-columns: auto 10px auto;
+        grid-template-columns: 50% 50%;
     }
+}
+
+@media (min-width: 700px) {
+
     .texts {
         margin: 20px;
         padding: 20px;
-        margin-left: 30px;
     }
     .wrap-text  {
         border-left: 1px solid;
-        margin-left: 30px;
+        margin-left: 20px;
         box-shadow: -15px 0px 15px 5px #aaaaaa;
     }
 }
 
 @media (max-width: 700px) { 
     .wrap-text  {
-        width: 300px;
+        min-width: 350px;
     }
 }
 
@@ -104,7 +107,6 @@ h2 {
 .texts {
   margin: 20px;
   padding: 20px;
-  margin-left: 30px;
 }
 
 .wrap-text  {
