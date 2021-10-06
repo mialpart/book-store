@@ -5,11 +5,11 @@
         <div v-if="bookCover">
             <img :alt="bookCover.url" align="left" height="150px" src="../../assets/kalevala.jpg" />
         </div>
-        <div class="small-left-margin">
+        <div class="info-texts small-left-margin">
             <h2>Tiedot</h2>
-            <p>Kirja: {{ book.title }}</p>
-            <p>Sivumäärä: {{ book.pageCount }}</p>
-            <p>Julkaistu: {{ this.$dateMonthYear(book.publishDate) }}</p>
+            <p><b>Kirja:</b> {{ book.title }}</p>
+            <p><b>Sivumäärä:</b> {{ book.pageCount }}</p>
+            <p><b>Julkaistu:</b> {{ this.$dateMonthYear(book.publishDate) }}</p>
         </div>
         </div>
     </div>
@@ -34,6 +34,11 @@ export default {
 <style>
 .small-left-margin {
     padding-left: 5px;
+}
+
+.info-texts p {
+  text-align: left;
+  font-family: serif;
 }
 
 .grid-book-info {

@@ -45,6 +45,7 @@ export default {
 .author-comp li {
     text-align: left;
     list-style: circle;
+    font-family: serif;
 }
 
 </style>

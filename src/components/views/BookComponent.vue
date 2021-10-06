@@ -66,10 +66,29 @@ export default {
 </script>
 
 <style>
-.grid {
-  display: grid;
-  grid-template-columns: auto 10px auto;
+@media (min-width: 700px) {
+    .grid {
+        display: grid;
+        grid-template-columns: auto 10px auto;
+    }
+    .texts {
+        margin: 20px;
+        padding: 20px;
+        margin-left: 30px;
+    }
+    .wrap-text  {
+        border-left: 1px solid;
+        margin-left: 30px;
+        box-shadow: -15px 0px 15px 5px #aaaaaa;
+    }
 }
+
+@media (max-width: 700px) { 
+    .wrap-text  {
+        width: 300px;
+    }
+}
+
 
 .bold p,
 h2 {
@@ -77,17 +96,19 @@ h2 {
 }
 
 .texts p {
-  margin: 20px;
+  margin: 0px;
+  text-align: left;
+  font-family: serif;
 }
 .texts {
   margin: 20px;
+  padding: 20px;
   margin-left: 30px;
 }
 
 .wrap-text  {
-  border-left: 1px solid;
-  margin-left: 30px;
-  box-shadow: -15px 0px 15px 5px #aaaaaa;
+    border-left: 1px solid;
+    box-shadow: -15px 0px 15px 5px #aaaaaa;
 }
 
 .page-margin {

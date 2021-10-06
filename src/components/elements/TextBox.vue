@@ -18,8 +18,11 @@ export default {
 </script>
 
 <style>
+
 .texts p {
-  margin: 20px;
+  margin: 0px;
+  text-align: left;
+  font-family: serif;
 }
 .texts {
   margin: 20px;

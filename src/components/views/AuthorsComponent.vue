@@ -15,8 +15,10 @@
       :fields="fields"
       :busy="isLoading || isEmptyAuthors(getAuthors)"
       striped
+      small
       hover
       responsive="sm"
+      no-border-collapse
     >
     <template #table-busy>
         <div class="text-center text-danger my-2">
@@ -55,8 +57,8 @@ export default {
       authors: this.$store.state.authors,
       index: this.$router.currentRoute.params.index,
       fields: [
-        { key: "firstName", label: "Etunimi", sortable: false },
-        { key: "lastName", label: "Sukunimi", sortable: false },
+        { key: "firstName", label: "Etunimi", sortable: false, tdClass: 'tdStyles' },
+        { key: "lastName", label: "Sukunimi", sortable: false, tdClass: 'tdStyles' },
         { key: "actions", label: "Kirja", sortable: false },
       ],
       perPage: 10,

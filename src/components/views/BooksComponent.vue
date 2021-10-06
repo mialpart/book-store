@@ -16,6 +16,7 @@
       :items="getBooks"
       :fields="fields"
       :busy="isLoading || isEmptyBooks(getBooks)"
+      small
       striped
       hover
       responsive="sm"
@@ -75,10 +76,10 @@ export default {
       books: this.$store.state.books,
       index: this.$router.currentRoute.params.index,
       fields: [
-        { key: "title", label: "Kirja", sortable: true },
-        { key: "pageCount", label: "Sivumäärä", sortable: true },
-        { key: "publishDate", label: "Julkaisupäivä", sortable: true },
-        { key: "description", label: "Kuvaus", sortable: false },
+        { key: "title", label: "Kirja", sortable: true, tdClass: 'tdStyles' },
+        { key: "pageCount", label: "Sivumäärä", sortable: true, tdClass: 'tdStyles' },
+        { key: "publishDate", label: "Julkaisupäivä", sortable: true, tdClass: 'tdStyles' },
+        { key: "description", label: "Kuvaus", sortable: false, tdClass: 'tdStyles' },
         { key: "actions", label: "Toiminnot", sortable: false },
       ],
       perPage: 10,
@@ -128,6 +129,10 @@ export default {
 
 .page-margin {
     margin: 50px;
+}
+
+.tdStyles {
+  font-family: serif;
 }
 
 .btns {
