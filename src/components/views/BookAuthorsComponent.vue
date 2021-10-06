@@ -1,8 +1,8 @@
 <template>
   <div class="box">
-    <div v-if="!isLoading && bookAuthorsExist">
+    <div v-if="!isLoading || bookAuthorsExist">
       <h2>Kirjailijat</h2>
-      <ul v-for="(author, index) in bookAuthors" v-bind:key="index">
+      <ul v-for="(author, index) in getBookAuthors" v-bind:key="index">
         <AuthorComponent :authorProp="author"></AuthorComponent>
       </ul>
     </div>
@@ -17,13 +17,10 @@ export default {
     AuthorComponent,
   },
   beforeMount() {
-    if (!this.isCorrectBookData()) {
-      this.$store.dispatch("getAuthorBookId", this.$router.currentRoute.params.index);
-    }
+    
   },
   data() {
     return {
-      bookAuthors: this.$store.state.bookAuthors,
     };
   },
   computed: {
@@ -36,6 +33,9 @@ export default {
       }
       return false;
     },
+    getBookAuthors() {
+        return this.$store.state.bookAuthors;
+    }
   },
   methods: {
     isCorrectBookData() {

@@ -1,6 +1,6 @@
 <template>
   <div class="page-margin">
-    <div v-if="!isLoading && storeHasBook">
+    <div v-if="!isLoading || storeHasBook">
       <div class="grid">
         <div>
           <BookInfoComponent class="box" :book="getBook"></BookInfoComponent>
@@ -27,13 +27,14 @@ export default {
     BookInfoComponent,
     TextBox,
   },
-  beforeMount() {
+  beforeCreate() {
     this.$store
       .dispatch("getBook", this.$router.currentRoute.params.index)
       .then(() => {
         this.refreshBooks();
       });
     this.$store.dispatch("getBookCover", this.$router.currentRoute.params.index);
+    this.$store.dispatch("getAuthorBookId", this.$router.currentRoute.params.index);
   },
   data() {
     return {
