@@ -1,15 +1,17 @@
 <template>
   <div class="page-margin">
-    <div v-if="!isLoading || storeHasBook">
-      <div class="grid">
-        <div>
-          <BookInfoComponent class="box" :book="getBook"></BookInfoComponent>
-          <BookAuthorsComponent class="info box"></BookAuthorsComponent>
-        </div>
-      <div></div>
-        <div v-if="getBook" class="wrap-text">
+    <div v-if="!isLoading">
+      <div v-if="storeHasBook">
+        <div class="grid">
+          <div>
+            <BookInfoComponent class="box" :book="getBook"></BookInfoComponent>
+            <BookAuthorsComponent class="info box"></BookAuthorsComponent>
+          </div>
+          <div></div>
+          <div v-if="getBook" class="wrap-text">
             <TextBox title="Kuvaus" :text="getBook.description"></TextBox>
             <TextBox title="Katkelma" :text="getBook.excerpt"></TextBox>
+          </div>
         </div>
       </div>
     </div>
@@ -52,7 +54,7 @@ export default {
       return this.$store.state.isLoading;
     },
     getBook() {
-        return this.$store.state.book;
+      return this.$store.state.book;
     }
   },
   methods: {
@@ -65,8 +67,8 @@ export default {
 
 <style>
 .grid {
-    display: grid;
-    grid-template-columns: auto 10px auto;
+  display: grid;
+  grid-template-columns: auto 10px auto;
 }
 
 .bold p,

@@ -1,6 +1,6 @@
 <template>
-  <div class="box">
-    <div v-if="!isLoading || bookAuthorsExist">
+  <div v-if="bookAuthorsExist" class="box">
+    <div >
       <h2>Kirjailijat</h2>
       <ul v-for="(author, index) in getBookAuthors" v-bind:key="index">
         <AuthorComponent :authorProp="author"></AuthorComponent>

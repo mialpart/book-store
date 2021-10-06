@@ -1,6 +1,6 @@
 <template>
-  <div class="box info">
-    <div v-if="book != null" class="info bold">
+  <div v-if="book != null" class="box info">
+    <div  class="info bold">
         <div class="grid-book-info">
         <div v-if="bookCover">
             <img :alt="bookCover.url" align="left" height="150px" src="../../assets/kalevala.jpg" />
