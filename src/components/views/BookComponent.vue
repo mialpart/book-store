@@ -30,6 +30,7 @@ export default {
     TextBox,
   },
   beforeCreate() {
+    this.$store.commit("setIsLoading", true);
     this.$store
       .dispatch("getBook", this.$router.currentRoute.params.index)
       .then(() => {
