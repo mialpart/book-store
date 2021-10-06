@@ -133,6 +133,7 @@ export default {
 
 .tdStyles {
   font-family: serif;
+  text-align: left;
 }
 
 .btns {
