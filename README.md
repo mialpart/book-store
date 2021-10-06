@@ -1,4 +1,4 @@
-# harness-racing-stats
+# book-store
 
 ## Project setup
 ```
