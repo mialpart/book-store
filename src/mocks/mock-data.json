@@ -1,0 +1,9 @@
+{
+    "books": [],
+    "book": null,
+    "bookCover": null,
+    "authors": [],
+    "author": null,
+    "bookAuthors": [],
+    "isLoading": false
+}
