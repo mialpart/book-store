@@ -18,9 +18,9 @@
 </template>
 
 <script>
-import BookInfoComponent from "./BookInfoComponent.vue";
-import BookAuthorsComponent from "./BookAuthorsComponent.vue";
-import TextBox from "./../elements/TextBox.vue";
+import BookInfoComponent from "./../components/elements/BookInfoComponent.vue";
+import BookAuthorsComponent from "./../components/elements/BookAuthorsComponent.vue";
+import TextBox from "./../components/elements/TextBox.vue";
 export default {
   name: "BookComponent",
   components: {

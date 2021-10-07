@@ -55,7 +55,7 @@
 </template>
 
 <script>
-import DeleteButton from "./../elements/DeleteButton.vue";
+import DeleteButton from "./../components/buttons/DeleteButton.vue";
 import _ from "lodash";
 export default {
   name: "BooksComponent",

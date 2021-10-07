@@ -3,10 +3,10 @@ import Vue from "vue";
 import App from "./App.vue";
 import Vuex from "vuex";
 import VueRouter from "vue-router";
-import BooksComponent from "./components/views/BooksComponent.vue";
-import BookComponent from "./components/views/BookComponent.vue";
-import AddBookForm from "./components/views/AddBookForm.vue";
-import AuthorsComponent from "./components/views/AuthorsComponent.vue";
+import BooksComponent from "./views/BooksComponent.vue";
+import BookComponent from "./views/BookComponent.vue";
+import AddBookForm from "./components/forms/AddBookForm.vue";
+import AuthorsComponent from "./views/AuthorsComponent.vue";
 import {
   ButtonPlugin,
   FormDatepickerPlugin,

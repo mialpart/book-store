@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import NavButton from "./components/elements/NavButton.vue";
+import NavButton from "./components/buttons/NavButton.vue";
 
 export default {
   name: "App",
