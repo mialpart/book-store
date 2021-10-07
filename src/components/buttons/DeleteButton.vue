@@ -21,7 +21,6 @@ export default {
 
 <style>
 .btns {
-  width: 150px;
   height: 50px;
 }
 

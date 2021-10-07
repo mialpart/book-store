@@ -1,5 +1,5 @@
 <template>
-    <div class="page-margin box">
+    <div class="table-page-margin box">
       <h1>Kirjailijat</h1>
       <h4>Listaus kirjailijoista ja teoksista</h4>
       <b-pagination
@@ -57,8 +57,8 @@ export default {
       authors: this.$store.state.authors,
       index: this.$router.currentRoute.params.index,
       fields: [
-        { key: "firstName", label: "Etunimi", sortable: false, tdClass: 'tdStyles' },
-        { key: "lastName", label: "Sukunimi", sortable: false, tdClass: 'tdStyles' },
+        { key: "firstName", label: "Etunimi", sortable: false, tdClass: 'tdStylesAuthors' },
+        { key: "lastName", label: "Sukunimi", sortable: false, tdClass: 'tdStylesAuthors' },
         { key: "actions", label: "Kirja", sortable: false },
       ],
       perPage: 10,
@@ -102,5 +102,7 @@ export default {
 </script>
 
 <style>
-
+.tdStyles {
+  font-family: serif;
+}
 </style>

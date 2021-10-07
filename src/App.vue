@@ -31,6 +31,19 @@ export default {
 </script>
 
 <style>
+@media (min-width: 900px) { 
+
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+    margin-left: 200px;
+  } 
+}
+
 @media (min-width: 700px) { 
     .sidenav {
       height: 100%;
@@ -50,7 +63,6 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
     margin-left: 200px;
   } 
   .nav-buttons {

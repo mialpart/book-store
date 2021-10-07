@@ -1,5 +1,5 @@
 <template>
-  <div class="page-margin box">
+  <div class="table-page-margin box">
     <h1>Kirjallisuusluettelo</h1>
     <h4>Listaus saatavilla olevista kirjoista</h4>
     <b-button v-on:click="addNewBook">Lisää kirja</b-button>
@@ -123,12 +123,15 @@ export default {
 </script>
 
 <style>
-.sr-only {
-  display: none;
+
+@media (min-width: 900px) { 
+  .table-page-margin {
+    margin: 50px;
+  }
 }
 
-.page-margin {
-    margin: 50px;
+.sr-only {
+  display: none;
 }
 
 .tdStyles {
@@ -137,7 +140,6 @@ export default {
 }
 
 .btns {
-  width: 150px;
   height: 50px;
 }
 </style>
